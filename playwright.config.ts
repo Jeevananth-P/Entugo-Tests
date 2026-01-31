@@ -6,8 +6,15 @@ dotenv.config();
 
 export default defineConfig({
   use: {
-    // ✅ AUTO-GRANT location permission for ALL tests
-    permissions: ["geolocation"],
+    // ✅ AUTO-GRANT these permission for ALL tests
+    permissions: [
+      'geolocation', 
+      'camera', 
+      'microphone', 
+      'notifications',
+      'clipboard-read',    
+      'clipboard-write'    
+    ],
 
     // ✅ Mock Chennai location (your location)
     geolocation: {
